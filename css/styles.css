@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+header .left,
+header .right {
+    display: flex;
+    align-items: center;
+}
+
+header .left p,
+header .right p {
+    margin: 0;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.aulas-hoje .container-cards .card,
+.eventos-unidade .evento {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.aulas-hoje .card h3,
+.eventos-unidade .evento h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .left,
+    header .right {
+        margin-bottom: 10px;
+    }
+
+    .container-cards {
+        flex-direction: column;
+    }
+}

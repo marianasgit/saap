@@ -45,7 +45,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         // Usuário e senha válidos
         $_SESSION['id_usuario'] = $row['id'];
         $_SESSION['nome_de_usuario'] = $row['nome_de_usuario'];
-        header("Location: index.php"); // Redirecione para a página inicial ou página de perfil
+        header("Location: paginaPrincipal.php"); // Redirecione para a página inicial ou página de perfil
         exit();
     } else {
         // Usuário ou senha incorretos
@@ -60,19 +60,22 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Login</h1>
-        <form method="post">
-            <label for="username">Nome de Usuário:</label>
-            <input type="text" id="username" name="username" required>
-
+<div class="page">
+        <form method="post" class="formLogin">
+            <h1>Login</h1>
+            <h2>Bem vindo de volta :)</h2>
+            <p>Digite os seus dados de acesso nos campos abaixo.</p>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required placeholder="Digite seu usuário" autofocus="true">
             <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Entrar</button>
+            <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+            <br><br>
+            <button type="submit" class="btn-acessar">Acessar</button>
+            <a href="/">Esqueci minha senha</a>
+            <p>Ainda não tem conta? <a href="registro.html">Cadastre-se</a></p>
         </form>
     </div>
 </body>

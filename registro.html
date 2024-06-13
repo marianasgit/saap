@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Centro Paula Souza</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/registro.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Cadastro</h1>
-        <form action="register.php" method="post">
+    <div class="page">
+        <form action="register.php" method="POST" class="formRegister">
+            <h1>Cadastro</h1>
+            <p>Registre os seus dados de acesso nos campos abaixo.</p>
             <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-
+            <input type="text" id="username" name="username" required placeholder="Digite seu usuário" autofocus="true" />
             <label for="RA">RA:</label>
-            <input type="RA" id="RA" name="RA" required>
-
-            <button type="submit">Cadastrar</button>
+            <input type="RA" id="RA" name="RA" required placeholder="Digite seu RA">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+            <input type="password" id="password" name="password" required placeholder="Digite sua senha novamente">
+            <br><br>
+            <input type="submit" value="Cadastrar" class="btn" />
+            <p>já possui uma conta? <a href="login.html">Acessa-lá</a></p>
         </form>
     </div>
 </body>

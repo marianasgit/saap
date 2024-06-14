@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Centro Paula Souza</title>
+    <link rel="stylesheet" href="styleLogin.css">
+</head>
+<body>
+    <div class="page">
+        <form action="login.php" method="post" class="formStyle">
+            <h1>Login</h1>
+            <h2>Bem vindo de volta :)</h2>
+            <p>Digite os seus dados de acesso nos campos abaixo.</p>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required placeholder="Digite seu usuário" autofocus="true">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+            <br><br>
+            <input type="submit" value="Acessar" class="btn" />
+            <a href="esqueci-a-senha.html">Esqueci minha senha</a>
+            <p>Ainda não tem conta? <a href="registro.html">Cadastre-se</a></p>
+        </form>
+    </div>
+</body>
+</html>
